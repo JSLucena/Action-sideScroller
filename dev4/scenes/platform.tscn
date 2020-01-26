@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/platform.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/terrain/platform.png" type="Texture" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 784.858, 18.3743 )
+
+[node name="platform" type="StaticBody2D"]
+collision_layer = 2
+physics_material_override = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.468292, -0.264435 )
+scale = Vector2( 5.4125, 0.28 )
+texture = ExtResource( 2 )
+
+[node name="floor" type="CollisionShape2D" parent="."]
+position = Vector2( 26, 2 )
+shape = SubResource( 2 )
