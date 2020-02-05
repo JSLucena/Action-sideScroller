@@ -1,12 +1,13 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/characters/Kirito.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/character/Kirito/idle.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/character/Kirito/jump.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/character/Kirito/walking.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/character/Kirito/attack1.png" type="Texture" id=5]
-[ext_resource path="res://assets/fonts/comboFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/fonts/comboFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/sprites/character/Kirito/idle.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/character/Kirito/jump.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/character/Kirito/walking.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/character/Kirito/attack1.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/character/Kirito/attack2.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/character/Kirito/attack3.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack_1_L"
@@ -70,6 +71,18 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -65, 132 ), Vector2( -70, 132 ), Vector2( -65, 132 ), Vector2( -60, 132 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitBox/hit:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 48.9607, -18.4078, 75.8675, -4.26093, 85.0213, -6.48004, 81.4153, -12.0278, 21.4991, -46.4241, 13.7322, -56.4102, 6.24268, -40.8763, 15.6739, -39.212 ), PoolVector2Array( -132.175, 13.492, -118.305, 120.842, -57.5569, 94.7672, -37.5849, 40.9536, 21.4991, -46.4241, 13.7322, -56.4102, -76.9742, -45.8694, -115.531, -26.4521 ), PoolVector2Array( -125.845, 93.1183, -120.006, 126.697, -55.8926, 100.038, -57.812, 71.8031, -50.8042, 35.0125, -47.3004, 24.5009, -103.07, 24.2089, -125.845, 47.568 ), PoolVector2Array( -87.5948, 120.565, -70.3675, 134.873, 15.7693, 70.3431, 5.84164, 58.0796, -8.46582, 63.9194, -32.1169, 81.1467, -51.9722, 99.834, -64.5277, 97.4981 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -135,6 +148,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( -65, 132 ), Vector2( -65, 132 ), Vector2( -65, 132 ), Vector2( -60, 132 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitBox/hit:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -15.4786, -36.6109, -8.10202, -39.6845, -4.7211, -45.2169, -10.5609, -55.9744, -24.0846, -48.5978, -75.7205, -15.7107, -86.478, -3.72373, -73.2617, -5.26052 ), PoolVector2Array( 136.663, 48.5269, 123.447, -4.64581, 61.3606, -55.9744, 6.65112, -46.4463, -29.0023, -28.6196, 41.9971, 35.9253, 22.6337, 82.6435, 123.139, 125.981 ), PoolVector2Array( 132.36, 85.4098, 134.819, 51.2931, 111.767, 1.19398, 39.5383, 28.8561, 39.8456, 50.0637, 32.4691, 66.0463, 22.6337, 83.873, 121.295, 127.825 ), PoolVector2Array( 69.3519, 132.435, 79.1873, 133.357, 88.7154, 114.609, 57.6723, 106.617, 9.10995, 63.8948, -3.79901, 58.6697, -16.0933, 68.5051, 0.196625, 75.8817 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Attack_2_L"
@@ -198,6 +223,18 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitBox/hit:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 92.4037, 12.2588, 63.2047, -22.7799, 16.4865, 8.57054, -17.0154, -11.4077, -73.569, -37.8403, -76.3353, -12.6371, -59.4306, 27.6267, 11.5688, 47.2975, 51.5252, 38.6915 ), PoolVector2Array( 67.8151, 25.4752, 51.5252, -11.715, 3.88489, 7.34111, -29.9244, -29.5417, -96.3134, -49.5199, -89.2442, -14.1739, -72.9543, 29.4708, -21.6257, 51.2931, 26.3219, 47.2975 ), PoolVector2Array( 49.3737, 32.5444, 27.8587, -9.87088, -8.40939, 2.4234, -36.3789, -26.4681, -96.0061, -47.9831, -101.231, -18.1695, -72.0323, 23.0163, -29.0023, 43.9166, 15.5644, 47.9122 ), PoolVector2Array( -56.6644, -23.7019, -57.2791, -27.3902, -66.1925, -29.8491, -77.5647, -33.8447, -85.2486, -38.1477, -89.2442, -34.7668, -81.8677, -32.9226, -74.4911, -29.5417, -64.041, -25.2387 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -263,8 +300,173 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( -55, 130 ), Vector2( -55, 130 ), Vector2( -55, 130 ), Vector2( -55, 130 ), Vector2( -55, 130 ), Vector2( -55, 130 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitBox/hit:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -24.0846, 39.9209, 60.4386, 35.3106, 98.2434, -6.48994, 78.2653, -61.1995, 29.7029, -39.0698, -17.0154, -24.9314, -56.3571, -54.1303, -72.9543, 14.7177 ), PoolVector2Array( 38.0015, 37.1547, 92.0963, 6.41904, 105.927, -26.4681, 93.9405, -69.8055, 32.4691, -50.1346, 13.413, -12.6371, -17.9374, -18.7842, -30.5391, 28.8561 ), PoolVector2Array( 82.5682, 10.1073, 104.391, -11.4077, 104.698, -51.6714, 93.9405, -69.8055, 32.4691, -50.1346, 35.5427, -22.1651, 13.413, -0.957527, 36.1573, 29.4708 ), PoolVector2Array( 59.2091, -17.2474, 58.9018, -20.6284, 50.6031, -20.9357, 44.7634, -22.4725, 38.3089, -21.2431, 35.5427, -22.1651, 34.0059, -17.5548, 50.2957, -17.5548 ) ]
+}
 
 [sub_resource type="Animation" id=5]
+resource_name = "Attack_3_L"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("attack_3_rev:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -7.60791, 4.69557, -11.4407, 11.0985, -23.3603, 40.3869, -42.3811, 77.8268, -46.3244, 116.185, -58.1544, 129.09, 61.2214, 129.09, 31.8256, 58.827, 21.4295, 7.92195, 32.1841, -23.2663, 18.9201, -46.2095, -0.438202, -43.7001, -18.3625, -22.1909, -9.04187, -3.19112 ), PoolVector2Array( -1.87213, -16.0966, -11.4407, 11.0985, -23.3603, 40.3869, -42.3811, 77.8268, -46.3244, 116.185, -58.1544, 129.09, 61.2214, 129.09, 37.2029, 60.2609, 25.0143, 22.9784, 35.4104, -15.3797, 41.8632, -29.3606, 35.4104, -47.2849, 11.7503, -48.0019, 0.278778, -46.9264 ), PoolVector2Array( -0.0797119, -18.9645, -6.53244, 5.05406, -23.3603, 40.3869, -42.3811, 77.8268, -46.3244, 116.185, -54.5696, 128.732, 61.2214, 129.09, 37.2029, 60.2609, 25.0143, 22.9784, 38.2783, -7.85144, 45.448, -26.4927, 42.5801, -45.4925, 17.1276, -54.0961, 7.80698, -53.0207 ), PoolVector2Array( -79.6636, 72.091, -90.7767, 89.2983, -81.8145, 102.921, -66.0411, 103.638, -81.4561, 126.222, -54.5696, 128.732, 61.2214, 129.09, 62.2969, 117.619, -37.7207, 67.0721, -15.4946, 39.4687, -23.0228, 30.5066, -64.6072, 67.0721, -69.2675, 36.9593, -80.0221, 40.1857 ), PoolVector2Array( -79.6636, 72.091, -90.7767, 89.2983, -81.8145, 102.921, -66.0411, 103.638, -81.4561, 126.222, -54.5696, 128.732, 61.2214, 129.09, 64.4478, 115.826, -37.7207, 67.0721, -15.4946, 39.4687, -23.0228, 30.5066, -64.6072, 67.0721, -69.2675, 36.9593, -80.0221, 40.1857 ), PoolVector2Array( -49.5508, 19.035, -66.7581, 33.7329, -67.1166, 59.5439, -32.3434, 57.0345, -55.6451, 86.7889, -53.4941, 130.524, 61.2214, 129.09, 59.429, 116.543, 7.44852, 54.8836, -9.04187, 37.6763, 14.6182, 41.6196, 6.37305, 26.2047, -38.7962, 25.4878, -40.5886, 17.6011 ), PoolVector2Array( -24.0983, -34.0209, -41.3056, -26.8512, -40.9471, 3.62012, -38.7962, 16.5256, -20.5134, 24.0538, -57.079, 128.373, 61.2214, 129.09, 59.429, 116.543, 30.3916, 57.393, 19.637, 33.3745, 42.5801, 33.3745, 21.788, 0.0352478, 4.58063, -16.8136, -5.81549, -16.8136 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("floorFinder1:cast_to")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("floorFinder2:cast_to")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 55, 130 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("floorFinder3:cast_to")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55, 130 ), Vector2( -55, 130 ), Vector2( -50, 130 ), Vector2( -70, 130 ), Vector2( -70, 130 ), Vector2( -50, 130 ), Vector2( -50, 130 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitBox/hit:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 79.3603, -15.5856, -9.1857, -39.4249, -73.8924, -15.245, -108.63, 30.0497, -133.831, 78.0689, -135.875, 150.949, -60.6105, 171.723, 12.2697, 41.6288, 39.1741, 8.93486, 67.4407, 11.3188 ), PoolVector2Array( -87.5149, 26.6441, -121.23, 53.889, -112.376, 84.5395, -106.927, 123.023, -81.7253, 145.841, -45.6258, 156.057, 4.77734, 160.485, 12.2697, 41.6288, 38.8335, 3.48587, -3.39615, -16.6073 ), PoolVector2Array( -84.1093, 54.9107, -99.7751, 95.7781, -89.5582, 125.407, -76.9575, 143.116, -24.8515, 145.16, -1.01221, 140.392, 32.7034, 112.806, 12.2697, 41.6288, 5.79901, 3.48587, -61.6322, 24.9412 ), PoolVector2Array( -44.9447, 82.1556, -50.3936, 114.85, -35.7495, 141.413, -20.0836, 143.116, 22.8271, 131.537, 27.2544, 117.915, 45.9853, 90.3291, 12.2697, 41.6288, -2.71503, 1.10194, -35.0684, 54.5701 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Attack_3_R"
+length = 0.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("attack_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -29.8768, -22.2218, -25.5738, -5.00978, -17.9186, 14.3591, -23.7296, 40.7864, -37.868, 76.4398, -64.9155, 129.305, 57.72, 128.383, 42.6595, 77.6693, 17.4562, 20.8082, 9.46494, -3.47299, 20.2224, -20.685, 4.54721, -40.3558, -6.2103, -45.8883, -19.4266, -43.7368 ), PoolVector2Array( -38.1754, -22.5291, -28.34, -4.08771, -17.9186, 14.3591, -23.7296, 40.7864, -37.868, 76.4398, -64.9155, 129.305, 57.72, 128.383, 42.6595, 77.6693, 17.4562, 20.8082, 9.46494, -3.47299, -0.677856, -39.7411, -5.59558, -48.6545, -36.0239, -48.3471, -37.5607, -36.6675 ), PoolVector2Array( -42.4784, -18.2261, -36.6386, -0.706772, -21.8855, 21.1156, -23.7296, 40.7864, -37.868, 76.4398, -64.9155, 129.305, 57.72, 128.383, 42.6595, 77.6693, 17.4562, 20.8082, -3.13672, -24.3733, -6.2103, -46.503, -13.5869, -54.8016, -43.7078, -48.6545, -43.7078, -33.594 ), PoolVector2Array( 36.5123, 46.0115, 27.599, 30.0289, 14.0753, 39.2496, 37.4344, 68.1412, -56.9242, 111.786, -64.9155, 129.305, 77.0835, 127.768, 75.2393, 106.868, 87.5336, 95.496, 89.6851, 83.2017, 80.157, 69.678, 79.5423, 38.3276, 72.4731, 37.0981, 64.4818, 66.9118 ), PoolVector2Array( 36.5123, 46.0115, 26.3617, 27.4455, 14.1015, 36.6407, 35.2163, 66.2696, -56.9242, 111.786, -64.9155, 129.305, 77.0835, 127.768, 75.2393, 106.868, 87.5336, 95.496, 89.6851, 83.2017, 80.157, 69.678, 79.5423, 38.3276, 72.4731, 37.0981, 64.4818, 66.9118 ), PoolVector2Array( 7.29022, 20.6343, -17.5708, 40.0463, 4.22519, 43.1114, -13.1435, 58.4366, -56.9242, 111.786, -64.9155, 129.305, 52.2444, 128.592, 57.6934, 90.4494, 35.2163, 56.3933, 58.3745, 61.1611, 69.2725, 52.6471, 63.8235, 33.9162, 45.4332, 16.8881, 37.2597, 24.721 ), PoolVector2Array( -28.8093, 38.3435, -11.4407, 11.0985, -23.3603, 40.3869, -28.8093, 52.9876, -56.9242, 111.786, -64.9155, 129.305, 54.9689, 127.911, 30.1079, 28.8078, 43.0492, 7.69293, 42.3681, -22.9576, 23.2966, -33.8556, 11.377, -25.3416, -7.35391, -15.1247, -40.729, 33.2351 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("floorFinder1:cast_to")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ), Vector2( 0, 130 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("floorFinder2:cast_to")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 55, 130 ), Vector2( 70, 130 ), Vector2( 70, 130 ), Vector2( 50, 130 ), Vector2( 50, 130 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("floorFinder3:cast_to")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -60, 130 ), Vector2( -60, 130 ), Vector2( -60, 130 ), Vector2( -60, 130 ), Vector2( -60, 130 ), Vector2( -60, 130 ), Vector2( -60, 130 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitBox/hit:polygon")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 81.6461, 30.7002, 58.9018, 15.9471, -48.9805, -32.3079, -71.1102, -10.1782, 28.7808, 113.072, 46.6075, 167.167, 126.828, 157.946, 162.788, 122.293, 109.308, 50.9858 ), PoolVector2Array( 116.685, 37.4621, 83.7977, 37.7694, 58.9018, 34.6959, -37.9156, 2.11605, -22.5478, 127.518, 12.7982, 166.245, 99.1655, 161.634, 132.053, 129.362, 126.828, 88.7907 ), PoolVector2Array( 92.711, 54.3667, 87.7933, 85.4097, 65.6636, 82.9509, -11.7903, 0.2719, -36.0715, 48.8343, -24.0846, 78.3405, 13.1056, 108.769, 69.3519, 154.258, 103.469, 136.738 ), PoolVector2Array( 55.8282, 97.3967, 38.3088, 78.3405, 35.85, 62.358, -11.7903, 0.2719, -51.4394, 36.8474, -40.9892, 70.964, -18.2448, 105.081, -7.79468, 113.687, 12.1835, 136.738, 27.5514, 142.885 ) ]
+}
+
+[sub_resource type="Animation" id=7]
 length = 0.7
 loop = true
 tracks/0/type = "value"
@@ -328,7 +530,7 @@ tracks/4/keys = {
 "values": [ Vector2( -60, 133 ), Vector2( -60, 133 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 length = 0.7
 loop = true
 step = 0.05
@@ -393,7 +595,7 @@ tracks/4/keys = {
 "values": [ Vector2( -60, 133 ), Vector2( -60, 133 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("jump_rev:frame")
@@ -456,7 +658,7 @@ tracks/4/keys = {
 "values": [ Vector2( -15, 138 ), Vector2( -15, 118 ), Vector2( -15, 95 ), Vector2( -15, 115 ), Vector2( -15, 135 ), Vector2( -15, 140 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("jump:frame")
@@ -519,7 +721,7 @@ tracks/4/keys = {
 "values": [ Vector2( -20, 140 ), Vector2( -20, 115 ), Vector2( -20, 95 ), Vector2( -20, 115 ), Vector2( -15, 135 ), Vector2( -15, 140 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=11]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -583,7 +785,7 @@ tracks/4/keys = {
 "values": [ Vector2( -35, 135 ), Vector2( -35, 135 ), Vector2( -35, 135 ), Vector2( -15, 135 ), Vector2( -35, 135 ), Vector2( -10, 135 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=12]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -648,53 +850,54 @@ tracks/4/keys = {
 }
 
 [node name="Character" type="KinematicBody2D"]
-collision_mask = 3
+collision_mask = 55
 script = ExtResource( 1 )
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
+visible = false
 build_mode = 1
-polygon = PoolVector2Array( -29.4345, -7.6712, -32.1882, 15.1101, -17.9186, 14.3591, -40.9503, 69.4348, -56.2213, 90.2133, -65.2337, 127.515, 59.1873, 128.516, 17.3799, 28.6287, 20.6344, 18.6149, 42.915, -7.42086, 18.882, -12.9284, 3.61096, -39.2146, -22.4248, -40.2159, -24.1772, -17.685 )
+polygon = PoolVector2Array( -7.60791, 4.69557, -11.4407, 11.0985, -23.3603, 40.3869, -42.3811, 77.8268, -46.3244, 116.185, -58.1544, 129.09, 61.2214, 129.09, 31.8256, 58.827, 21.4295, 7.92195, 32.1841, -23.2663, 18.9201, -46.2095, -0.438202, -43.7001, -18.3625, -22.1909, -9.04187, -3.19112 )
+
+[node name="hitBox" type="Area2D" parent="."]
+collision_layer = 16384
+collision_mask = 32
+
+[node name="hit" type="CollisionPolygon2D" parent="hitBox"]
+visible = false
+position = Vector2( 1.5368, -20.5929 )
+build_mode = 1
+polygon = PoolVector2Array( -44.9447, 82.1556, -50.3936, 114.85, -35.7495, 141.413, -20.0836, 143.116, 22.8271, 131.537, 27.2544, 117.915, 45.9853, 90.3291, 12.2697, 41.6288, -2.71503, 1.10194, -35.0684, 54.5701 )
+disabled = true
 
 [node name="animations" type="AnimationPlayer" parent="."]
 anims/Attack_1_L = SubResource( 1 )
 anims/Attack_1_R = SubResource( 2 )
 anims/Attack_2_L = SubResource( 3 )
 anims/Attack_2_R = SubResource( 4 )
-anims/Idle_L = SubResource( 5 )
-anims/Idle_R = SubResource( 6 )
-anims/Jump_L = SubResource( 7 )
-anims/Jump_R = SubResource( 8 )
-anims/Walk_L = SubResource( 9 )
-anims/Walk_R = SubResource( 10 )
+anims/Attack_3_L = SubResource( 5 )
+anims/Attack_3_R = SubResource( 6 )
+anims/Idle_L = SubResource( 7 )
+anims/Idle_R = SubResource( 8 )
+anims/Jump_L = SubResource( 9 )
+anims/Jump_R = SubResource( 10 )
+anims/Walk_L = SubResource( 11 )
+anims/Walk_R = SubResource( 12 )
 
-[node name="idle" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-hframes = 8
+[node name="currentState" type="Label" parent="."]
+margin_left = -18.5316
+margin_top = -72.2734
+margin_right = 21.4684
+margin_bottom = -58.2734
 
-[node name="idle_rev" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-flip_h = true
-hframes = 8
-frame = 1
-
-[node name="jump" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-hframes = 6
-frame = 5
-
-[node name="jump_rev" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-flip_h = true
-hframes = 6
-frame = 5
+[node name="combo" type="Label" parent="."]
+margin_left = -37.641
+margin_top = -112.923
+margin_right = 2.35898
+margin_bottom = -79.923
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="floorFinder1" type="RayCast2D" parent="."]
 enabled = true
@@ -708,67 +911,104 @@ collision_mask = 3
 
 [node name="floorFinder3" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( -60, 130 )
+cast_to = Vector2( -55, 130 )
 collision_mask = 3
 
-[node name="walk" type="Sprite" parent="."]
+[node name="idle" type="Sprite" parent="." groups=[
+"Sprites",
+]]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 8
+
+[node name="idle_rev" type="Sprite" parent="." groups=[
+"Sprites",
+]]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+flip_h = true
+hframes = 8
+frame = 1
+
+[node name="jump" type="Sprite" parent="." groups=[
+"Sprites",
+]]
 visible = false
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
+hframes = 6
+frame = 5
+
+[node name="jump_rev" type="Sprite" parent="." groups=[
+"Sprites",
+]]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+flip_h = true
+hframes = 6
+frame = 5
+
+[node name="walk" type="Sprite" parent="." groups=[
+"Sprites",
+]]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
 vframes = 2
 hframes = 3
 frame = 2
 
-[node name="walk_rev" type="Sprite" parent="."]
+[node name="walk_rev" type="Sprite" parent="." groups=[
+"Sprites",
+]]
 visible = false
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 flip_h = true
 vframes = 2
 hframes = 3
 frame = 5
-
-[node name="currentState" type="Label" parent="."]
-margin_left = -18.5316
-margin_top = -72.2734
-margin_right = 21.4684
-margin_bottom = -58.2734
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="attack_1" type="Sprite" parent="."]
+[node name="attack_1" type="Sprite" parent="." groups=[
+"Sprites",
+]]
 visible = false
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 vframes = 2
 hframes = 2
 frame = 3
 
-[node name="attack_1_rev" type="Sprite" parent="."]
+[node name="attack_1_rev" type="Sprite" parent="." groups=[
+"Sprites",
+]]
 visible = false
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 flip_h = true
 vframes = 2
 hframes = 2
 frame = 3
 
-[node name="combo" type="Label" parent="."]
-margin_left = -37.641
-margin_top = -112.923
-margin_right = 2.35898
-margin_bottom = -98.923
-custom_fonts/font = ExtResource( 6 )
-
-[node name="attack_2" type="Sprite" parent="."]
+[node name="attack_2" type="Sprite" parent="." groups=[
+"Sprites",
+]]
 visible = false
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 vframes = 2
 hframes = 3
+frame = 5
 
-[node name="attack_2_rev" type="Sprite" parent="."]
+[node name="attack_2_rev" type="Sprite" parent="." groups=[
+"Sprites",
+]]
 visible = false
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
@@ -776,3 +1016,22 @@ flip_h = true
 vframes = 2
 hframes = 3
 frame = 5
+
+[node name="attack_3" type="Sprite" parent="." groups=[
+"Sprites",
+]]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+hframes = 7
+frame = 6
+
+[node name="attack_3_rev" type="Sprite" parent="." groups=[
+"Sprites",
+]]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+flip_h = true
+hframes = 7
+[connection signal="body_entered" from="hitBox" to="." method="_on_hitBox_body_entered"]

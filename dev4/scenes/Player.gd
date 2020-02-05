@@ -10,6 +10,8 @@ var is_jumping = false
 export var char_select = "Kirito"
 var attack = false
 
+signal damage(body, dmg)
+
 ###################COMBO SYSTEM##########################
 var append = true
 
@@ -23,6 +25,8 @@ func _ready():
 	char_node.set_name("Character")
 	add_child(char_node)
 	#print(self.get_node("Character").name)
+	
+	$Character.connect("hit", self , "_on_hit")
 	pass 
 
 func get_mov_input():
@@ -37,6 +41,9 @@ func get_mov_input():
 			
 
 func get_sys_input():
+	if combo.size() > 5:
+		_on_comboReset_timeout()
+	
 	if(Input.is_key_pressed(KEY_Z)):
 		sys.append("Z")
 		attack = true
@@ -51,8 +58,7 @@ func get_sys_input():
 	if(Input.is_key_pressed(KEY_C)):
 		sys.append("C")
 	if(Input.is_key_pressed(KEY_CONTROL)):
-		combo.clear()
-		$PlayerFSM.cur_atk = 1
+		_on_comboReset_timeout()
 		
 func combo_sniffer():
 	pass
@@ -95,9 +101,20 @@ func clear_buffer():
 func _on_comboReset_timeout():
 	combo.clear()
 	$PlayerFSM.cur_atk = 1
-	pass # Replace with function body.
+	
 
 
 func _on_comboAppend_timeout():
 	append = true
-	pass # Replace with function body.
+	
+	
+func _on_hit(body):
+	var dmg = 0
+	match $PlayerFSM.cur_atk:
+		1: dmg = $Character.damage
+		2: dmg = $Character.damage * 1.2
+		3: dmg = $Character.damage * 1.5
+		
+	emit_signal("damage",body,dmg)
+
+

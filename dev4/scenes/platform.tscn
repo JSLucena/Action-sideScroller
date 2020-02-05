@@ -10,6 +10,7 @@ extents = Vector2( 784.858, 18.3743 )
 
 [node name="platform" type="StaticBody2D"]
 collision_layer = 2
+collision_mask = 33
 physics_material_override = SubResource( 1 )
 script = ExtResource( 1 )
 

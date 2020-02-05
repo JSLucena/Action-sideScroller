@@ -178,6 +178,7 @@ func _enter_state(new_state, old_state):
 			parent.get_node("Character").get_node("currentState").text = "fall"
 
 		states.attack:
+			parent.get_node("Character").get_node("hitBox").get_node("hit").set_disabled(false)
 			parent.get_node("comboReset").start()
 			parent.get_node("Character").get_node("animations").set_speed_scale(2.0)
 			if parent.side == "right":
@@ -206,13 +207,13 @@ func _exit_state(old_state, new_state):
 			parent.get_node("Character").get_node("jump_rev").hide()
 			
 		states.attack:
-			
+			parent.get_node("Character").get_node("hitBox").get_node("hit").set_disabled(true)
 			added_to_combo = false
 			parent.attack = false
 			parent.get_node("Character").get_node("attack_"+ str(cur_atk)).hide()
 			parent.get_node("Character").get_node("attack_"+ str(cur_atk) + "_rev").hide()
 			parent.get_node("Character").get_node("animations").set_speed_scale(1.0)
 			cur_atk += 1
-			if(cur_atk > 2):
+			if(cur_atk > 3):
 				cur_atk = 1
 			parent.get_node("comboReset").start()
