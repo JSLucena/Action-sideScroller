@@ -89,7 +89,7 @@ func apply_movement():
 
 
 func apply_gravity(count, value):
-	velocity.y = velocity.y + $Character.falling_speed * value * count
+	velocity.y = velocity.y + $Character.falling_speed * value * count	
 	if velocity.y > $Character.max_fall_speed:
 		velocity.y = $Character.max_fall_speed
 

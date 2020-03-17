@@ -1,0 +1,23 @@
+V  0.0.2
+changelog:
+-added character HP bar
+-added enemy  movement
+
+WIP features:
+-Death and respawn
+-enemy attack and damage hitbox
+-damage feedback
+
+
+V 0.0.1
+Changelog:
+- Added a new attack
+- Added the first enemy
+- Added attack hitboxes
+- Added HP bar
+- Bugfixes
+
+WIP Features:
+- Character HP bar
+- enemy movement
+- Death and respawn

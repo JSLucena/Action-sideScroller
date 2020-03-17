@@ -18,6 +18,9 @@ var is_jumping = false
 signal hit(body)
 
 func _ready():
+	$HPBar.update_max_health(max_health)
+	$HPBar.update_health(cur_health, cur_health)
+	$HPBar.set_min_health()
 	pass 
 
 

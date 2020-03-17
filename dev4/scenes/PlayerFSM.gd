@@ -180,7 +180,7 @@ func _enter_state(new_state, old_state):
 		states.attack:
 			parent.get_node("Character").get_node("hitBox").get_node("hit").set_disabled(false)
 			parent.get_node("comboReset").start()
-			parent.get_node("Character").get_node("animations").set_speed_scale(2.0)
+			parent.get_node("Character").get_node("animations").set_speed_scale(1.35)
 			if parent.side == "right":
 				parent.get_node("Character").get_node("attack_"+ str(cur_atk)).show()
 				
