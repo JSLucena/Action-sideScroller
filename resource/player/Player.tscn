@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resource/player/Player.gd" type="Script" id=1]
+[ext_resource path="res://resource/player/PlayerFSM.gd" type="Script" id=2]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="PlayerFSM" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="comboReset" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="comboAppend" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="atkReset" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="comboReset" to="." method="_on_comboReset_timeout"]
+[connection signal="timeout" from="comboAppend" to="." method="_on_comboAppend_timeout"]
+[connection signal="timeout" from="atkReset" to="PlayerFSM" method="_on_atkReset_timeout"]
