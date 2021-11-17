@@ -898,6 +898,9 @@ margin_left = -18.5316
 margin_top = -72.2734
 margin_right = 21.4684
 margin_bottom = -58.2734
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="combo" type="Label" parent="."]
 margin_left = -37.641

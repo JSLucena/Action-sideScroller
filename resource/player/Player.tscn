@@ -14,12 +14,17 @@ wait_time = 0.7
 one_shot = true
 
 [node name="comboAppend" type="Timer" parent="."]
-wait_time = 0.15
+wait_time = 0.3
 one_shot = true
 
 [node name="atkReset" type="Timer" parent="."]
 one_shot = true
 
+[node name="dashReset" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="timeout" from="comboReset" to="." method="_on_comboReset_timeout"]
 [connection signal="timeout" from="comboAppend" to="." method="_on_comboAppend_timeout"]
 [connection signal="timeout" from="atkReset" to="PlayerFSM" method="_on_atkReset_timeout"]
+[connection signal="timeout" from="dashReset" to="." method="_on_dashReset_timeout"]
