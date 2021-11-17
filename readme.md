@@ -6,12 +6,14 @@ Desenvolvimento de um Sidescroller utilizando a Engine Godot
 
 ## Ultimas mudancas
 
-###Inicio do refatoramento
-Alterei o personagem de teste, desenhado na mao
-As novas animacoes no animationPlayer do novo personagem estao prontas
+Reestruturacao da cena player.tscn
+hitboxes dos ataques ok
+Sistema de dash, mas ta mais ou menos ainda
+Refiz a deteccao de colisao
 
 
 
 ##Mudancas programadas
 
-Reestruturacao da cena player.tscn
+Reestruturacao do sistema de combo
+Boneco de treino
