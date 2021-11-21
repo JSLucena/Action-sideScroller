@@ -32,6 +32,8 @@ config/icon="res://icon.png"
 2d_physics/layer_4="allyHurtBox"
 2d_physics/layer_5="enemyHurtbox"
 2d_physics/layer_6="enemyTerrainCollision"
+2d_physics/layer_7="allyHitBox"
+2d_physics/layer_8="enemyHitBox"
 2d_physics/player=false
 
 [physics]

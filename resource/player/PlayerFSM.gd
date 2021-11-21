@@ -56,7 +56,7 @@ func _state_logic(delta):
 		
 		
 	#print(parent.sprinting)
-	print(parent.dash_sniffer)
+	#print(parent.dash_sniffer)
 	pass
 	############################################
 

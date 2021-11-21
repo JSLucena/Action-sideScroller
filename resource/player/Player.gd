@@ -17,6 +17,13 @@ export var char_select = "teste" # character name
 signal damage(body, dmg) #signal to handle damage
 
 
+########UI CONFIGURATION################################
+
+
+
+########################################################
+
+
 ###################COMBO SYSTEM##########################
 var append = true
 
@@ -89,10 +96,6 @@ func get_sys_input():
 		
 func combo_sniffer():
 	pass
-	
-			
-
-
 func isOnFloor():
 	#return $Character.get_node("floorFinder1").is_colliding() or $Character.get_node("floorFinder2").is_colliding() or $Character.get_node("floorFinder3").is_colliding()
 	pass
@@ -153,8 +156,14 @@ func _on_hit(body):
 	$PlayerFSM.last_atk = $PlayerFSM.cur_atk
 
 
-
+func take_damage(damage):
+	var old_health = $Character.cur_health
+	if($Character.cur_health > 0):
+		$Character.cur_health -= damage
+		$Character.get_node("HPBar").update_health($Character.cur_health,old_health)
 
 func _on_dashReset_timeout():
 	dash_sniffer.clear()
 	pass # Replace with function body.
+	
+
